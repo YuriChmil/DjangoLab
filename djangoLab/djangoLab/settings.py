@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app_blog'
 ]
 
 MIDDLEWARE = [
@@ -70,15 +71,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'djangoLab.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# Підключення до бази даних
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+#Settings for connecto to publish DataBase
+#DATABASES = {
+#    'defautl':{
+#        'ENGINE':'django.db.backends.postgresql',
+#        'NAME':'YourName',
+#        'USER':'USER',
+#        'PASSWORD':'YOURPASSWOR',
+#        'HOST':'YOURHOST'
+#            }
+#        }
 
 
 # Password validation
