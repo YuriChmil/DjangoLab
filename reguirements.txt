@@ -1,1 +1,4 @@
 django
+Pillow
+psycopg2
+wheel

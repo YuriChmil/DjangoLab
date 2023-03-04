@@ -9,11 +9,11 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent/'app_blog'
 
 
 # Quick-start development settings - unsuitable for production
@@ -72,23 +72,24 @@ WSGI_APPLICATION = 'djangoLab.wsgi.application'
 
 
 # Підключення до бази даних
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
 
 #Settings for connecto to publish DataBase
-#DATABASES = {
-#    'defautl':{
-#        'ENGINE':'django.db.backends.postgresql',
-#        'NAME':'YourName',
-#        'USER':'USER',
-#        'PASSWORD':'YOURPASSWOR',
-#        'HOST':'YOURHOST'
-#            }
-#        }
+DATABASES = {
+    'default':{
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME':'django',
+        'USER':'root',
+        'PASSWORD':'root',
+        'HOST':'chmil.pp.ua',
+        'PORT':'5432'
+            }
+        }
 
 
 # Password validation
@@ -131,10 +132,10 @@ STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT =(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_ROOT= (BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_ROOT= (BASE_DIR, 'media')
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -19,8 +19,8 @@ class HomePageView(TemplateView):
     def get_queryset(self, *args, **kwargs):
         categories = Category.objects.all()
         return categories
-#    def get(self, request, **kwargs):
-#        return render(request, 'index.html', context=None)
+
+
 
 
 
