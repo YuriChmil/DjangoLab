@@ -86,7 +86,7 @@ DATABASES = {
         'NAME':'django',
         'USER':'root',
         'PASSWORD':'root',
-        'HOST':'chmil.pp.ua',
+        'HOST':'********************',
         'PORT':'5432'
             }
         }
