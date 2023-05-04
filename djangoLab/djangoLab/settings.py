@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-2=nl6x9ujsgvoay*)#aa+(h!@rd0lph+p1bpia1#5yxeiffy^*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['chmil.pp.ua', 'localhost', '127.0.0.1'] # потрібно вказати публічну ІП адресу
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'chmil.pp.ua']
+#ALLOWED_HOSTS = ['chmil.pp.ua', 'localhost', '127.0.0.1'] # потрібно вказати публічну ІП адресу
+#ALLOWED_HOSTS = ['chmil.pp.ua', 'localhost', '127.0.0.1', '194.61.53.138'] # потрібно вказати публічну ІП адресу
+
 
 # Application definition
 
@@ -86,7 +88,7 @@ DATABASES = {
         'NAME':'django',
         'USER':'root',
         'PASSWORD':'root',
-        'HOST':'********************',
+        'HOST':'chmil.pp.ua',
         'PORT':'5432'
             }
         }
@@ -129,8 +131,8 @@ USE_TZ = True
 #STATIC_URL = 'static/'
 STATIC_URL = '/static/'
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT =(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT =(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #MEDIA_ROOT= (BASE_DIR, 'media')

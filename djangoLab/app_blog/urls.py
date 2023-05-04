@@ -4,6 +4,9 @@ from app_blog import views
 #from django.conf.urls import url Django v3
 from .views import (HomePageView, ArticleDetail,  
                     ArticleList, ArticleCategoryList)
+#from django.conf import settings
+#from django.conf.urls.static import static
+
 
 #urlpatterns = [
 #    path(r'', views.HomePageView.as_view()),
@@ -11,11 +14,11 @@ from .views import (HomePageView, ArticleDetail,
 
 
 #urlpatterns = [
-#    path(r'^$', views.home)#, name='home')
-#    path(r'^about/$', views.about, name='about'),
-#    path(r'^about/company/$', views.about_company, 
-#        name='about_company'),  
-#
+ #   path(r'^$', views.home)#, name='home')
+  #  path(r'^about/$', views.about, name='about'),
+   # path(r'^about/company/$', views.about_company, 
+    #    name='about_company'),  
+
 
 
 urlpatterns = [
@@ -29,3 +32,7 @@ urlpatterns = [
          ArticleDetail.as_view(),
          name='news-detail'),
 ]
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+

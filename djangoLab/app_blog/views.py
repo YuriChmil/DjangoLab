@@ -20,10 +20,6 @@ class HomePageView(TemplateView):
         categories = Category.objects.all()
         return categories
 
-
-
-
-
 class ArticleDetail(DateDetailView):
     model = Article
     template_name = 'article_detail.html'

@@ -3,7 +3,7 @@
 from django.utils import timezone
 
 from django.db import models
-from django.db import models
+
 from django.urls import reverse
 
 
@@ -77,8 +77,8 @@ class ArticleImage(models.Model):
                                 verbose_name=u'Стаття',
                                 related_name='images',
                                 on_delete=models.CASCADE)
-#    image = models.ImageField(u'Фото', upload_to='photos', default='default_image.jpg')
-#    image = models.ImageField(u'Фото', upload_to='photos') 
+    image = models.ImageField(u'Фото', upload_to='photos', default='default_image.jpg')
+   # image = models.ImageField(u'Фото', upload_to='photoss') 
     title = models.CharField(u'Заголовок', max_length=250,
                              help_text=u'Максимум 250 сим.', 
                              blank=True)
@@ -95,8 +95,9 @@ class ArticleImage(models.Model):
 
     @property
     def filename(self):
+      
 #        return '/'.join(self.image.name)[-1]
-        return self.image.name.split('/', 1)[-1]
+       return self.image.name.split('/', 1)[-1]
 
 
 
