@@ -18,6 +18,7 @@ class HomePageView(TemplateView):
 
     def get_queryset(self, *args, **kwargs):
         categories = Category.objects.all()
+
         return categories
 
 class ArticleDetail(DateDetailView):
